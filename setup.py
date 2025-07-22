@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="AircasLogger",          # 包名（pip install 时使用的名字）
-    version="0.1.0",            # 版本号
+    version="0.1.1",            # 版本号
     author="Chao Qin",
     description="A Logger",
     long_description=open("README.md").read(),  # 长描述（通常是README）

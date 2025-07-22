@@ -12,6 +12,7 @@ def setup_logger(
         debug: bool = False,
         name: str = None,
         formatter: logging.Formatter = None,
+        terminator='\n'
 ) -> logging.Logger:
     # Set up the logger
     if name:
@@ -32,6 +33,7 @@ def setup_logger(
     if debug:
         stream_handler = logging.StreamHandler(sys.stdout)
         stream_handler.setFormatter(formatter)
+        stream_handler.terminator = terminator
         stream_handler.setLevel(level)
         logger.addHandler(stream_handler)
 
@@ -45,6 +47,7 @@ def setup_logger(
             encoding='utf-8'
         )
         handler.setFormatter(formatter)
+        handler.terminator = terminator
         handler.setLevel(level)
         logger.addHandler(handler)
 
